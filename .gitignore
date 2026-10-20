@@ -1,0 +1,13 @@
+# Dados gerados pelo notebook (reproduzíveis a partir da fonte)
+data/
+ra1/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
