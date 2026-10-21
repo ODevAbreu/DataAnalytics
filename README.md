@@ -12,7 +12,19 @@ Projeto da disciplina de Data Analytics (PjBL). O objetivo é investigar **o que
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ODevAbreu/DataAnalytics/blob/main/notebooks/RA1_Ingestao_Preparacao_GTAV.ipynb)
 
-### Como reproduzir
+## RA2 – Data Stream
+
+Análise com **Spark Structured Streaming** (Cenário A, dados simulados a partir do `vehicles_clean`): compras de veículos chegam em 5 lotes e são agregadas em **janelas *tumbling* de 10 minutos** (contagem, valor total, valor médio e maior valor).
+
+| Entregável | Arquivo |
+|---|---|
+| Notebook (RA1 + RA2, seções 7 a 12) | [notebooks/RA1_Ingestao_Preparacao_GTAV.ipynb](notebooks/RA1_Ingestao_Preparacao_GTAV.ipynb) |
+| Documentação do RA2 | [docs/RA2_Documentacao.md](docs/RA2_Documentacao.md) |
+| PDF do notebook | [docs/RA1_RA2_GTAV.pdf](docs/RA1_RA2_GTAV.pdf) |
+
+O RA2 usa o `vehicles_clean` gerado pelo RA1: execute o notebook de cima para baixo.
+
+### Como reproduzir (RA1)
 1. Abra o notebook no Google Colab (botão acima ou `Arquivo → Abrir notebook → GitHub`).
 2. `Ambiente de execução → Executar tudo`.
 3. O notebook baixa os dados brutos de um **commit fixo** do repositório de origem, avalia a qualidade, limpa e grava o resultado em `data/processed/` (Parquet e CSV).
@@ -32,4 +44,4 @@ Nenhum arquivo precisa ser enviado manualmente; o PySpark já vem instalado no C
 ```
 
 ### Fluxo
-Fontes de Dados → Ingestão → Compreensão dos Dados → Avaliação da Qualidade → Limpeza e Preparação → **`vehicles_clean`** (790 veículos × 47 colunas) → RA2
+Fontes de Dados → Ingestão → Compreensão dos Dados → Avaliação da Qualidade → Limpeza e Preparação → **`vehicles_clean`** (790 veículos × 47 colunas) → RA2 (streaming)
